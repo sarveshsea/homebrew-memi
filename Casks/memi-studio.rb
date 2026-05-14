@@ -1,20 +1,21 @@
 cask "memi-studio" do
-  version "1.0.0"
+  version "1.0.1"
 
   on_arm do
-    sha256 "b6c96f24642c16a62287ac93f47ef480411ad0e86f8b3fe54c312a847a70e122"
+    sha256 "34cf8f052864220de58f251a80cba56f14b1fe3f58c6626815db78ac5e9e2675"
+
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_aarch64.dmg",
         verified: "github.com/sarveshsea/memi-studio/"
   end
-
   on_intel do
-    sha256 "88bbc33195bde4a23f1596edaaedbab98c7d4fb6a9449e8c22b2ec8ecd29003d"
+    sha256 "f7b3cf8ae0379ca95ea08c1d6109069aba9b8635dcbf7a37bf6e5f8799a62027"
+
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_x64.dmg",
         verified: "github.com/sarveshsea/memi-studio/"
   end
 
   name "Mémoire Studio"
-  desc "Native macOS agent shell for Codex, Claude Code, OpenCode, Hermes, Ollama, Gemini, and Mémoire-native"
+  desc "Agent shell for Codex and Claude Code"
   homepage "https://github.com/sarveshsea/memi-studio"
 
   livecheck do
@@ -30,10 +31,10 @@ cask "memi-studio" do
   zap trash: [
     "~/Library/Application Support/cv.memoire.studio",
     "~/Library/Caches/cv.memoire.studio",
+    "~/Library/HTTPStorages/cv.memoire.studio",
+    "~/Library/Logs/cv.memoire.studio",
     "~/Library/Preferences/cv.memoire.studio.plist",
     "~/Library/Saved Application State/cv.memoire.studio.savedState",
-    "~/Library/Logs/cv.memoire.studio",
-    "~/Library/HTTPStorages/cv.memoire.studio",
     "~/Library/WebKit/cv.memoire.studio",
   ]
 end
