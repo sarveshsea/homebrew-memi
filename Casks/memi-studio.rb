@@ -1,14 +1,14 @@
 cask "memi-studio" do
-  version "1.0.1"
+  version "1.0.3"
 
   on_arm do
-    sha256 "34cf8f052864220de58f251a80cba56f14b1fe3f58c6626815db78ac5e9e2675"
+    sha256 "2fe6f1cf73de2ec9c475ad61a1b42a1f33a16402d032072a34137d2c29560382"
 
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_aarch64.dmg",
         verified: "github.com/sarveshsea/memi-studio/"
   end
   on_intel do
-    sha256 "f7b3cf8ae0379ca95ea08c1d6109069aba9b8635dcbf7a37bf6e5f8799a62027"
+    sha256 "1a755914de035129c0eaa4f864f94e70ecb6005243d26a88b22b9692327e2080"
 
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_x64.dmg",
         verified: "github.com/sarveshsea/memi-studio/"
@@ -24,7 +24,7 @@ cask "memi-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "Mémoire Studio.app"
 
